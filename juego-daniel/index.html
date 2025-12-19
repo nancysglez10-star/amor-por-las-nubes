@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Amor por las nubes 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="startScreen" class="screen">
+  <h1>💖 Amor por las nubes 💖</h1>
+  <button id="playButton">Play</button>
+</div>
+
+<div id="difficultyScreen" class="screen" style="display:none;">
+  <h2>Elige la dificultad</h2>
+  <button class="diffBtn" data-speed="2" data-bomb="0.05">Fácil</button>
+  <button class="diffBtn" data-speed="3" data-bomb="0.1">Normal</button>
+  <button class="diffBtn" data-speed="4" data-bomb="0.15">Medio</button>
+  <button class="diffBtn" data-speed="5" data-bomb="0.2">Difícil</button>
+  <button class="diffBtn" data-speed="6" data-bomb="0.25">Impossible</button>
+</div>
+
+<div id="instructionsScreen" class="screen" style="display:none;">
+  <p>Recoge los corazones lo más rápido posible antes de que se acabe el tiempo ❤️</p>
+  <p>Mueve con ⬅️ ➡️</p>
+  <p>Pulsa "Space" para pausar en cualquier momento</p>
+  <button id="readyButton">Listo</button>
+</div>
+
+<div id="levelScreen" class="screen" style="display:none;">
+  <h2>Selecciona el nivel</h2>
+  <div id="levelButtons"></div>
+</div>
+
+<canvas id="gameCanvas" width="900" height="600"></canvas>
+
+<div id="pauseScreen" class="screen" style="display:none;">
+  <h2>Juego Pausado 💖</h2>
+  <button id="resumeButton">Reanudar</button>
+  <button id="exitButton">Salir</button>
+</div>
+
+<div id="retryScreen" class="screen" style="display:none;">
+  <h2 id="finalMessage"></h2>
+  <button id="retryButton">Reintentar</button>
+</div>
+
+<p id="creator" style="position:absolute;bottom:10px;width:100%;text-align:center;font-size:18px;color:#ff4d6d;">Creado por Nancy para Daniel 💖</p>
+
+<script src="game.js"></script>
+</body>
+</html>
